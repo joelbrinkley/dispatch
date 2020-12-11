@@ -4,7 +4,6 @@ using System.Threading;
 using Dispatch.Abstractions;
 using Dispatch.Specs.Infrastructure;
 using Machine.Specifications;
-using Moq;
 using It = Machine.Specifications.It;
 
 namespace Dispatch.Specs
@@ -16,7 +15,7 @@ namespace Dispatch.Specs
         {
             static TestRequestHandler _requestHandler;
             static TestRequest _testRequest;
-            static Dispatcher _dispatcher;
+            static IDispatcher _dispatcher;
 
             Establish context = () =>
             {
